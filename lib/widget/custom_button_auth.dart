@@ -4,8 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomButtonAuth extends StatelessWidget {
   final Widget tujuan;
   final String namaButton;
+  final BorderRadiusGeometry? borderRadius;
+  final double? lebarContainer;
   const CustomButtonAuth(
-      {super.key, required this.namaButton, required this.tujuan});
+      {super.key,
+      required this.namaButton,
+      required this.tujuan,
+      this.borderRadius,
+      this.lebarContainer});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class CustomButtonAuth extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(top: 30.h),
         height: 50.h,
-        width: 260.w,
+        width: lebarContainer ?? 260.w,
         child: ElevatedButton(
           onPressed: () {
             Navigator.push(
@@ -23,7 +29,7 @@ class CustomButtonAuth extends StatelessWidget {
             foregroundColor: const Color(0xFFC5705D),
             backgroundColor: const Color(0xFFC5705D),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.r),
+              borderRadius: borderRadius ?? BorderRadius.circular(5.r),
             ),
           ),
           child: Text(
