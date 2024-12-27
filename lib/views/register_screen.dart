@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:masaku/views/info_screen.dart';
 import 'package:masaku/views/login_screen.dart';
+import 'package:masaku/widget/custom_button_auth.dart';
+import 'package:masaku/widget/custom_text_auth.dart';
+import 'package:masaku/widget/custom_textfield.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -50,27 +54,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyle(fontSize: 15.sp),
               ),
             ),
-            Container(
-                width: 280.w,
-                margin: EdgeInsets.only(left: 40.h, top: 5.h),
-                child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      hintText: "Masukkan nama",
-                      hintStyle:
-                          TextStyle(color: Colors.grey.withOpacity(0.5))),
-                )),
+            const CustomTextField(hintText: "nama"),
             Container(
               margin: EdgeInsets.only(left: 40.h, top: 10.h),
               child: Text(
@@ -78,27 +62,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyle(fontSize: 15.sp),
               ),
             ),
-            Container(
-                width: 280.w,
-                margin: EdgeInsets.only(left: 40.h, top: 5.h),
-                child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      hintText: "Masukkan e-mail",
-                      hintStyle:
-                          TextStyle(color: Colors.grey.withOpacity(0.5))),
-                )),
+            const CustomTextField(hintText: "e-mail"),
             Container(
               margin: EdgeInsets.only(left: 40.h, top: 10.h),
               child: Text(
@@ -106,27 +70,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyle(fontSize: 15.sp),
               ),
             ),
-            Container(
-                width: 280.w,
-                margin: EdgeInsets.only(left: 40.h, top: 5.h),
-                child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      hintText: "Masukkan kata sandi",
-                      hintStyle:
-                          TextStyle(color: Colors.grey.withOpacity(0.5))),
-                )),
+            const CustomTextField(hintText: "kata sandi"),
             Container(
               margin: EdgeInsets.only(left: 40.h, top: 10.h),
               child: Text(
@@ -134,73 +78,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyle(fontSize: 15.sp),
               ),
             ),
-            Container(
-                width: 280.w,
-                margin: EdgeInsets.only(left: 40.h, top: 5.h),
-                child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                          borderSide: BorderSide(
-                              color: const Color(0xFFC5705D), width: 2.w)),
-                      hintText: "Masukkan konfirmasi kata sandi",
-                      hintStyle:
-                          TextStyle(color: Colors.grey.withOpacity(0.5))),
-                )),
-            Center(
-              child: Container(
-                margin: EdgeInsets.only(top: 30.h),
-                height: 50.h,
-                width: 260.w,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: const Color(0xFFC5705D),
-                    backgroundColor: const Color(0xFFC5705D),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5.r),
-                    ),
-                  ),
-                  child: Text(
-                    "Daftar",
-                    style: TextStyle(fontSize: 16.sp, color: Colors.white),
-                  ),
-                ),
-              ),
+            const CustomTextField(hintText: "konfirmasi kata sandi"),
+            const CustomButtonAuth(
+              namaButton: "Daftar",
+              tujuan: InfoScreen(),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 10.h),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Sudah punya akun ? ",
-                    style: TextStyle(fontSize: 16.sp),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen()));
-                    },
-                    child: Text(
-                      "Login ",
-                      style: TextStyle(
-                          fontSize: 16.sp, color: const Color(0xFFC5705D)),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            const CustomTextView(
+                pertanyaan: "Sudah", arahan: "Masuk", tujuan: LoginScreen())
           ],
         ),
       ),
