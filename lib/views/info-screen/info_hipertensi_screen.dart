@@ -43,7 +43,7 @@ class InfoHipertensiScreen extends StatelessWidget {
             child: Text(
               "Hipertensi",
               style: TextStyle(
-                  fontSize: 32.sp,
+                  fontSize: 30.sp,
                   color: const Color(0xFFC5705D),
                   fontWeight: FontWeight.bold),
             ),
@@ -57,7 +57,7 @@ class InfoHipertensiScreen extends StatelessWidget {
                 Text(
                   "Definisi :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -67,7 +67,7 @@ class InfoHipertensiScreen extends StatelessWidget {
                 Text(
                   "Hipertensi adalah kondisi di mana tekanan darah terhadap dinding arteri terlalu tinggi secara konsisten.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -78,7 +78,7 @@ class InfoHipertensiScreen extends StatelessWidget {
                 Text(
                   "Gejala :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -88,7 +88,7 @@ class InfoHipertensiScreen extends StatelessWidget {
                 Text(
                   "Biasanya tanpa gejala, tetapi pada tekanan darah sangat tinggi dapat menyebabkan sakit kepala, pusing, dan pandangan kabur.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -99,7 +99,7 @@ class InfoHipertensiScreen extends StatelessWidget {
                 Text(
                   "Hindari : ",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -109,7 +109,7 @@ class InfoHipertensiScreen extends StatelessWidget {
                 Text(
                   "Garam berlebih, makanan olahan, makanan kalengan, gorengan, makanan tinggi lemak jenuh, dan minuman berkafein berlebih.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,

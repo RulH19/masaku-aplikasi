@@ -43,7 +43,7 @@ class InfoAsamUratScreen extends StatelessWidget {
             child: Text(
               "Asam Urat",
               style: TextStyle(
-                  fontSize: 32.sp,
+                  fontSize: 30.sp,
                   color: const Color(0xFFC5705D),
                   fontWeight: FontWeight.bold),
             ),
@@ -57,7 +57,7 @@ class InfoAsamUratScreen extends StatelessWidget {
                 Text(
                   "Definisi :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -67,7 +67,7 @@ class InfoAsamUratScreen extends StatelessWidget {
                 Text(
                   "Asam urat adalah gangguan metabolisme yang menyebabkan kadar asam urat dalam darah meningkat (hiperurisemia), sehingga membentuk kristal pada sendi dan jaringan sekitar.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -78,7 +78,7 @@ class InfoAsamUratScreen extends StatelessWidget {
                 Text(
                   "Gejala :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -88,7 +88,7 @@ class InfoAsamUratScreen extends StatelessWidget {
                 Text(
                   "Nyeri hebat mendadak di sendi (terutama jempol kaki), bengkak, kemerahan, dan panas pada sendi.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -99,7 +99,7 @@ class InfoAsamUratScreen extends StatelessWidget {
                 Text(
                   "Hindari : ",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -109,7 +109,7 @@ class InfoAsamUratScreen extends StatelessWidget {
                 Text(
                   "Jeroan, daging merah, makanan laut (kerang, udang), alkohol, dan kacang-kacangan tinggi purin",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,

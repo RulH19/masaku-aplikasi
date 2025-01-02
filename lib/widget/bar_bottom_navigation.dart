@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:masaku/views/home-screen/home_screen.dart';
 import 'package:masaku/views/info-screen/info_aplikasi_screen.dart';
 import 'package:masaku/views/kategori-screen/kategori_screen.dart';
+import 'package:masaku/views/notifikasi-screen/notifikasi_screen.dart';
 import 'package:masaku/views/profile-screen/profile_screen.dart';
 import 'package:masaku/views/profile-screen/pusat_bantuan_screen.dart';
 
@@ -19,7 +20,7 @@ class _BarBottomNavigationState extends State<BarBottomNavigation> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const KategoriScreen(),
-    const PusatBantuanScreen(),
+    const NotifikasiScreen(),
     const ProfileScreen(),
   ];
 
@@ -96,10 +97,11 @@ class _BarBottomNavigationState extends State<BarBottomNavigation> {
       child: isActive
           ? Container(
               height: 40.h,
-              width: 100.w,
+              width: 120.w,
+              padding: EdgeInsets.all(10.w),
               decoration: BoxDecoration(
-                color: const Color(0xDFD3C34D),
-                borderRadius: BorderRadius.circular(15.r),
+                color: const Color(0xFFDFD3C3),
+                borderRadius: BorderRadius.circular(10.r),
                 boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
@@ -113,12 +115,12 @@ class _BarBottomNavigationState extends State<BarBottomNavigation> {
                 children: [
                   Image.asset(
                     imagePath,
-                    width: 24.0,
-                    height: 24.0,
+                    width: 24.w,
+                    height: 24.h,
                     color: isActive ? Colors.black : Colors.grey,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding: const EdgeInsets.only(left: 10.0),
                     child: Text(
                       label,
                       style: const TextStyle(

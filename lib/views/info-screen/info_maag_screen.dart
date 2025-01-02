@@ -43,7 +43,7 @@ class InfoMaagScreen extends StatelessWidget {
             child: Text(
               "Maag",
               style: TextStyle(
-                  fontSize: 32.sp,
+                  fontSize: 30.sp,
                   color: const Color(0xFFC5705D),
                   fontWeight: FontWeight.bold),
             ),
@@ -57,7 +57,7 @@ class InfoMaagScreen extends StatelessWidget {
                 Text(
                   "Definisi :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -67,7 +67,7 @@ class InfoMaagScreen extends StatelessWidget {
                 Text(
                   "Maag adalah peradangan pada lapisan lambung yang bisa disebabkan oleh iritasi, infeksi bakteri (seperti Helicobacter pylori), atau penggunaan obat tertentu seperti NSAID (ibuprofen).",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -78,7 +78,7 @@ class InfoMaagScreen extends StatelessWidget {
                 Text(
                   "Gejala :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -88,7 +88,7 @@ class InfoMaagScreen extends StatelessWidget {
                 Text(
                   "Nyeri atau perih di perut bagian atas, mual, muntah, kembung, rasa panas di dada (heartburn).",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -99,7 +99,7 @@ class InfoMaagScreen extends StatelessWidget {
                 Text(
                   "Hindari : ",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -109,7 +109,7 @@ class InfoMaagScreen extends StatelessWidget {
                 Text(
                   "Makanan pedas, asam, berlemak, gorengan, kopi, alkohol, dan soda.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,

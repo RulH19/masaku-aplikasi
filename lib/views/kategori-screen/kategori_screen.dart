@@ -16,7 +16,7 @@ class KategoriScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Container(
         margin: EdgeInsets.only(
-          top: 30.h,
+          top: 20.h,
         ),
         child: SafeArea(
           child: SingleChildScrollView(

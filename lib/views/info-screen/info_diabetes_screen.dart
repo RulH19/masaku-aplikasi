@@ -43,7 +43,7 @@ class InfoDiabetesScreen extends StatelessWidget {
             child: Text(
               "Diabetes",
               style: TextStyle(
-                  fontSize: 32.sp,
+                  fontSize: 30.sp,
                   color: const Color(0xFFC5705D),
                   fontWeight: FontWeight.bold),
             ),
@@ -57,7 +57,7 @@ class InfoDiabetesScreen extends StatelessWidget {
                 Text(
                   "Definisi :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -67,7 +67,7 @@ class InfoDiabetesScreen extends StatelessWidget {
                 Text(
                   "Diabetes merupakan kondisi kronis di mana tubuh mengalami kesulitan mengatur kadar gula (glukosa) dalam darah. Hal ini terjadi karena gangguan produksi atau fungsi hormon insulin",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -78,7 +78,7 @@ class InfoDiabetesScreen extends StatelessWidget {
                 Text(
                   "Gejala :",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -88,7 +88,7 @@ class InfoDiabetesScreen extends StatelessWidget {
                 Text(
                   "Rasa haus berlebih, sering buang air kecil, kelelahan, penurunan berat badan tanpa sebab, dan luka sulit sembuh.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
@@ -99,7 +99,7 @@ class InfoDiabetesScreen extends StatelessWidget {
                 Text(
                   "Hindari : ",
                   style: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: 22.sp,
                       color: const Color(0xFFC5705D),
                       fontWeight: FontWeight.bold),
                 ),
@@ -109,7 +109,7 @@ class InfoDiabetesScreen extends StatelessWidget {
                 Text(
                   "Makanan tinggi gula, nasi putih, roti putih, dan minuman manis.",
                   style: TextStyle(
-                    fontSize: 18.sp,
+                    fontSize: 16.sp,
                     color: const Color(0xFFC5705D),
                   ),
                   textAlign: TextAlign.justify,
