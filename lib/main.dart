@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:masaku/views/splash_screen.dart';
+import 'package:masaku/views/auth-screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
