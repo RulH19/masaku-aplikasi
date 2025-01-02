@@ -64,9 +64,23 @@ flutter:
     - assets/login.png
     - assets/register.png
     - assets/back.png
-    - assets/logo-app.svg
     - assets/no-content.png
     - assets/no-foto.png
+    - assets/home.png
+    - assets/notification-bing.png
+    - assets/user-square.png
+    - assets/category.png
+    - assets/Setting.png
+    - assets/right.png
+    - assets/user-edit.png
+    - assets/message-question.png
+    - assets/info-circle.png
+    - assets/logout.png
+    - assets/asam-urat.png
+    - assets/hipertensi.png
+    - assets/maag.png
+    - assets/diabetes.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
