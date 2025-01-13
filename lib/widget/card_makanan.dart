@@ -17,7 +17,6 @@ class CardMakanan extends StatelessWidget {
       onTap: () {},
       child: Container(
         margin: EdgeInsets.all(5.r),
-        width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: getImageProvider(imagePath), fit: BoxFit.cover),

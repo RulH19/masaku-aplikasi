@@ -9,6 +9,9 @@ class CustomAppbarKategori extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      automaticallyImplyLeading: false,
       leading: Container(
         margin: EdgeInsets.only(left: 18.w),
         width: 32.w,

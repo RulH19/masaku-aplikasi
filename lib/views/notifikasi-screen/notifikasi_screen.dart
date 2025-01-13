@@ -1,56 +1,92 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class NotifikasiScreen extends StatelessWidget {
-  const NotifikasiScreen({super.key});
+class NotifikasiScreen extends StatefulWidget {
+  const NotifikasiScreen({Key? key}) : super(key: key);
+
+  @override
+  State<NotifikasiScreen> createState() => _NotifikasiScreenState();
+}
+
+class _NotifikasiScreenState extends State<NotifikasiScreen> {
+  int _currentTabIndex = 0;
+
+  final List<Widget> _tabs = [
+    SemuaNotifikasi(),
+    DibacaNotifikasi(),
+    BelumDibacaNotifikasi(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
-          title: Text(
-            "Notifikasi",
-            style: TextStyle(
-                fontSize: 24.sp,
-                color: const Color(0xFFC5705D),
-                fontWeight: FontWeight.bold),
-          ),
-          centerTitle: true,
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(50.h),
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF8EDE3),
-                borderRadius: BorderRadius.circular(15.r),
-              ),
-              child: TabBar(
-                indicator: BoxDecoration(
-                  color: const Color(0xFFC5705D),
-                  borderRadius: BorderRadius.circular(15.r),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        automaticallyImplyLeading: false,
+        title: Text(
+          "Notifikasi",
+          style: TextStyle(
+              fontSize: 24.sp,
+              color: const Color(0xFFC5705D),
+              fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
+      body: Container(
+        margin: EdgeInsets.only(top: 10.h),
+        color: Colors.white,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _buildTabButton("Semua", 0),
+                SizedBox(
+                  width: 5.h,
                 ),
-                labelColor: Colors.white,
-                unselectedLabelColor: Colors.grey,
-                indicatorSize: TabBarIndicatorSize.tab,
-                tabs: const [
-                  Tab(text: 'Semua'),
-                  Tab(text: 'Dibaca'),
-                  Tab(text: 'Belum Dibaca'),
-                ],
+                _buildTabButton("Dibaca", 1),
+                SizedBox(
+                  width: 5.h,
+                ),
+                _buildTabButton("Belum Dibaca", 2),
+              ],
+            ),
+            Expanded(
+              child: IndexedStack(
+                index: _currentTabIndex,
+                children: _tabs,
               ),
             ),
-          ),
-        ),
-        body: TabBarView(
-          children: [
-            SemuaNotifikasi(),
-            DibacaNotifikasi(),
-            BelumDibacaNotifikasi(),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTabButton(String label, int index) {
+    bool isActive = _currentTabIndex == index;
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _currentTabIndex = index;
+        });
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 25.w),
+        decoration: BoxDecoration(
+          color: isActive ? const Color(0xFFC5705D) : const Color(0xFFF8EDE3),
+          borderRadius: BorderRadius.circular(10.r),
+        ),
+        child: Center(
+          child: Text(
+            label,
+            style: TextStyle(
+              color: isActive ? Colors.white : const Color(0xFFC5705D),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
     );
@@ -58,54 +94,33 @@ class NotifikasiScreen extends StatelessWidget {
 }
 
 class SemuaNotifikasi extends StatelessWidget {
+  const SemuaNotifikasi({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          ListTile(
+    return ListView(
+      children: [
+        Center(
+          child: Container(
+            margin: EdgeInsets.symmetric(vertical: 20.h),
+            child: Text('Hari Ini'),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.h),
+          decoration: BoxDecoration(
+            color: const Color(0xFFF8EDE3),
+            borderRadius: BorderRadius.circular(10.r),
+          ),
+          child: ListTile(
             leading: Icon(Icons.notifications),
             title: Text('Ada resep baru nih!'),
             subtitle: Text(
                 'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
             trailing: Text('10 mins ago'),
           ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Resepnya sudah masuk ke favorit ya~'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Kemarin',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('10 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Resepnya sudah masuk ke favorit ya~'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -113,101 +128,13 @@ class SemuaNotifikasi extends StatelessWidget {
 class DibacaNotifikasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('10 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Resepnya sudah masuk ke favorit ya~'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Kemarin',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('10 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Resepnya sudah masuk ke favorit ya~'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-        ],
-      ),
-    );
+    return Center(child: Text("Dibaca Notifikasi"));
   }
 }
 
 class BelumDibacaNotifikasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('10 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Ada resep baru nih!'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore et dolore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Resepnya sudah masuk ke favorit ya~'),
-            subtitle: Text(
-                'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-            trailing: Text('30 mins ago'),
-          ),
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Kemarin',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-          ),
-          ListTile(
-              title: Text('Resepnya sudah masuk ke favorit ya~'),
-              subtitle: Text(
-                  'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-              trailing: Icon(Icons.notifications)),
-          ListTile(
-              title: Text('Resepnya sudah masuk ke favorit ya~'),
-              subtitle: Text(
-                  'Lorem Ipsum tempor incididunt ut labore, in voluptate velit esse cillum'),
-              trailing: Icon(Icons.notifications)),
-        ],
-      ),
-    );
+    return Center(child: Text("Belum Dibaca Notifikasi"));
   }
 }

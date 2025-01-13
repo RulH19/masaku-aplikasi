@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:masaku/views/home-screen/home_screen.dart';
-import 'package:masaku/views/info-screen/info_aplikasi_screen.dart';
 import 'package:masaku/views/auth-screen/login_screen.dart';
 import 'package:masaku/widget/custom_button_auth.dart';
 import 'package:masaku/widget/custom_text_auth.dart';

@@ -64,6 +64,7 @@ flutter:
     - assets/login.png
     - assets/register.png
     - assets/back.png
+    - assets/arrow_forward.png
     - assets/no-content.png
     - assets/no-foto.png
     - assets/home.png
@@ -80,6 +81,14 @@ flutter:
     - assets/hipertensi.png
     - assets/maag.png
     - assets/diabetes.png
+    - assets/search-normal.png
+    - assets/sendok-garpu.png
+    - assets/close-circle.png
+    - assets/berhenti-dialog.png
+    - assets/hipertensi-dialog.png
+    - assets/maag-dialog.png
+    - assets/diabetes-dialog.png
+    - assets/asam-urat-dialog.png
 
   #   - images/a_dot_ham.jpeg
 

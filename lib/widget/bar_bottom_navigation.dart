@@ -100,7 +100,7 @@ class _BarBottomNavigationState extends State<BarBottomNavigation> {
               width: 120.w,
               padding: EdgeInsets.all(10.w),
               decoration: BoxDecoration(
-                color: const Color(0xFFDFD3C3),
+                color: const Color(0xFFDFD3C3).withOpacity(0.3),
                 borderRadius: BorderRadius.circular(10.r),
                 boxShadow: const [
                   BoxShadow(
